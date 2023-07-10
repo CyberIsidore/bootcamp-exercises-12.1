@@ -61,9 +61,15 @@ Examples:
     // [{name: 'Elie', title:'instructor'}, {name: 'Tim', title:'instructor'}, {name: 'Matt', title:'instructor'}, {name: 'Colt', title:'instructor'}]
 
 */
-function addKeyAndValue(arr, key, value) {
+const addKeyAndValue = ((arr, key, value) => {
+    const mappedArr = [];
+    const newThing = (arr.map((arr) => ({ ...arr, [key]: value })));
+    mappedArr.push(newThing);
 
-}
+    return mappedArr
+});
+
+
 
 /*
 Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count
